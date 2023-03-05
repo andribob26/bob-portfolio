@@ -61,7 +61,7 @@ Font.register({
   ],
 });
 
-const Pdf = () => {
+export const Pdf = () => {
   return (
     <Document>
       <Page

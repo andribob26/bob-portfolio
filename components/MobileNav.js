@@ -3,6 +3,10 @@ import { gsap, Power3 } from "gsap";
 import menuNav from "../utils/menuNav";
 import { MdClose } from "react-icons/md";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+const DownloadPdfWithNoSrr = dynamic(() => import("./DownloadPdf"), {
+  ssr: false,
+});
 
 const MobileNav = ({ pathName, linkClickHandler }) => {
   const closeMobileNav = () => {
@@ -29,7 +33,8 @@ const MobileNav = ({ pathName, linkClickHandler }) => {
                 menu.title === pathName && "text-my-primary"
               } hover:text-my-primary`}
             >
-              <a className="cursor-pointer"
+              <a
+                className="cursor-pointer"
                 onClick={(e) => {
                   linkClickHandler(e, menu.link);
                 }}
@@ -40,14 +45,15 @@ const MobileNav = ({ pathName, linkClickHandler }) => {
           );
         })}
         <li>
-          <Link
+          {/* <Link
             href={`/resume`}
             target={`_blank`}
             rel={`noopener noreferrer`}
             className="text-2xl bg-transparent border-2 border-my-black dark:border-white hover:border-my-primary dark:hover:border-my-primary hover:text-my-primary px-4 py-2 rounded-3xl transition-all duration-500 ease-out"
           >
             Resume
-          </Link>
+          </Link> */}
+          <DownloadPdfWithNoSrr/>
         </li>
       </ul>
     </div>
