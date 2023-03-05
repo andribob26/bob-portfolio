@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { SwitchTransition, Transition } from "react-transition-group";
 import { useRouter } from "next/router";
-import MobileNav from "./mobileNav";
+import MobileNav from "./MobileNav";
 import Splas from "./Splas";
 import Header from "./Header";
 import Footer from "./Footer";
