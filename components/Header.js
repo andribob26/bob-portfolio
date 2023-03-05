@@ -134,7 +134,7 @@ const Header = ({ pathName, linkClickHandler }) => {
       </nav>
       <div className="btn-cv-el -translate-y-12 opacity-0 flex items-center gap-3">
         <Link
-          href={`http://localhost:3000/resume`}
+          href={`/resume`}
           target={`_blank`}
           rel={`noopener noreferrer`}
           className="hidden lg:block font-my-font text-sm bg-transparent border-2 border-my-black dark:border-white hover:border-my-primary dark:hover:border-my-primary hover:text-my-primary px-4 py-2 rounded-3xl transition-all duration-500 ease-out"
