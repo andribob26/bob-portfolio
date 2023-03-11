@@ -95,7 +95,7 @@ export const Pdf = () => {
                 fontStyle: "bold",
               }}
             >
-              Junior Frontend
+              Junior Programmer
             </Text>
           </View>
           <View
@@ -175,7 +175,7 @@ export const Pdf = () => {
                 Aplikasi berbasis mobile yang digunakan untuk membantu mengukur
                 luas area yang memanfaatkan gps dalam pengukurannya
               </ListItem>
-              <ListItem>Menggunakan Dart(Flutter), Leaflet</ListItem>
+              <ListItem>Menggunakan Dart(Flutter), GetX, Leaflet</ListItem>
             </View>
           </View>
 
@@ -196,7 +196,7 @@ export const Pdf = () => {
                 Aplikasi berbasis mobile crop/pangkas gambar yang mudah di
                 gunakan
               </ListItem>
-              <ListItem>Menggunakan Dart(Flutter)</ListItem>
+              <ListItem>Menggunakan Dart(Flutter), GetX</ListItem>
             </View>
           </View>
 
@@ -217,7 +217,7 @@ export const Pdf = () => {
                 Aplikasi berbasis mobile untuk menonton siaran langsung televisi
                 lokal
               </ListItem>
-              <ListItem>Menggunakan Dart(Flutter), Firebase</ListItem>
+              <ListItem>Menggunakan Dart(Flutter), GetX, Firebase</ListItem>
             </View>
           </View>
         </View>
@@ -266,10 +266,14 @@ export const Pdf = () => {
             <ListItem>TypeScript</ListItem>
             <ListItem>Dart</ListItem>
             <ListItem>TailwindCss</ListItem>
+            <ListItem>Node.js</ListItem>
             <ListItem>React.js</ListItem>
             <ListItem>Next.js</ListItem>
+            <ListItem>Redux</ListItem>
             <ListItem>Flutter</ListItem>
+            <ListItem>GetX</ListItem>
             <ListItem>Express.js</ListItem>
+            <ListItem>ORM Sequelize</ListItem>
           </View>
         </View>
       </Page>

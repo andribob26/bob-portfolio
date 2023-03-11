@@ -12,6 +12,10 @@ import {
   SiNextdotjs,
   SiExpress,
   SiTypescript,
+  SiNodedotjs,
+  SiSequelize,
+  SiRedux,
+  SiGetX,
 } from "react-icons/si";
 import Image from "next/image";
 
@@ -83,6 +87,10 @@ export const getStaticProps = async (ctx) => {
       icon: renderToString(<SiTailwindcss className="text-my-primary mr-2" />),
     },
     {
+      nama: "Node.js",
+      icon: renderToString(<SiNodedotjs className="text-my-primary mr-2" />),
+    },
+    {
       nama: "React.js",
       icon: renderToString(<SiReact className="text-my-primary mr-2" />),
     },
@@ -91,12 +99,20 @@ export const getStaticProps = async (ctx) => {
       icon: renderToString(<SiNextdotjs className="text-my-primary mr-2" />),
     },
     {
+      nama: "Redux",
+      icon: renderToString(<SiRedux className="text-my-primary mr-2" />),
+    },
+    {
       nama: "Flutter",
       icon: renderToString(<SiFlutter className="text-my-primary mr-2" />),
     },
     {
       nama: "Express.js",
       icon: renderToString(<SiExpress className="text-my-primary mr-2" />),
+    },
+    {
+      nama: "ORM Sequelize",
+      icon: renderToString(<SiSequelize className="text-my-primary mr-2" />),
     },
   ];
 
