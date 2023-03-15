@@ -80,7 +80,7 @@ const Header = ({ pathName, linkClickHandler }) => {
       >
         <MdMenu size={32} />
       </button>
-      <nav className="flex items-center">
+      <nav className="flex items-center font-bold">
         <div className="lg:mr-16">
           <a
             className="cursor-pointer"
@@ -137,7 +137,7 @@ const Header = ({ pathName, linkClickHandler }) => {
           href={`/resume`}
           target={`_blank`}
           rel={`noopener noreferrer`}
-          className="hidden lg:block font-my-font text-sm bg-transparent border-2 border-my-black dark:border-white hover:border-my-primary dark:hover:border-my-primary hover:text-my-primary px-4 py-2 rounded-3xl transition-all duration-500 ease-out"
+          className="hidden lg:block font-my-font font-bold text-sm bg-transparent border-2 border-my-black dark:border-white hover:border-my-primary dark:hover:border-my-primary hover:text-my-primary px-4 py-2 rounded-3xl transition-all duration-500 ease-out"
         >
           Resume
         </Link>

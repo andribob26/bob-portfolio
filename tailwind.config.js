@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         "my-white": "#EBEDEF",
         "my-white-dark": "#AEB6BF",
-        "my-black-light": " #5d6d7E",
+        "my-black-light": "#5d6d7E",
         "my-black": "#283747",
         "my-black-dark": "#1B2631",
         "my-primary": "#E74C3C",
@@ -19,7 +19,7 @@ module.exports = {
       },
       fontFamily: {
         'my-font': "Philosopher, sans-serif",
-      }
+      },
     },
   },
   // variants: {

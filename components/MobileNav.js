@@ -24,7 +24,7 @@ const MobileNav = ({ pathName, linkClickHandler }) => {
       >
         <MdClose size={32} />
       </button>
-      <ul className="list-mobile-nav-el font-my-font text-center flex flex-col gap-12 text-3xl font-semibold capitalize">
+      <ul className="list-mobile-nav-el font-my-font text-center flex flex-col gap-12 text-3xl font-bold capitalize">
         {menuNav.map((menu, i) => {
           return (
             <li
@@ -53,7 +53,7 @@ const MobileNav = ({ pathName, linkClickHandler }) => {
           >
             Resume
           </Link> */}
-          <DownloadPdfWithNoSrr/>
+          <DownloadPdfWithNoSrr />
         </li>
       </ul>
     </div>

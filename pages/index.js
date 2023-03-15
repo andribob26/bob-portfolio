@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div id="home">
       <div className="absolute px-6 lg:px-20 w-full lg:w-1/2 text-center top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <h1 className="title-el opacity-0 text-7xl font-extrabold">
+        <h1 className="title-el opacity-0 text-7xl font-black">
           <span className="inline-block  ">I`m</span>
           <span className="inline-block text-my-primary">&nbsp;Bob</span>
         </h1>
@@ -17,8 +17,8 @@ const HomePage = () => {
         </h2>
         <div className="text-home-el text-sm opacity-0 mt-2 text-my-black-light dark:text-my-white">
           <p>
-            Saya adalah seorang programer. Saya suka
-            mempelajari sesuatu yang baru, terutama di bidang teknologi.
+            Saya adalah seorang programer. Saya suka mempelajari sesuatu yang
+            baru, terutama di bidang teknologi.
           </p>
         </div>
         <div className="sos-el text-4xl opacity-0 mt-4 flex items-center justify-center gap-4">

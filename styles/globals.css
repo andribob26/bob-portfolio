@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Philosopher";
+  src: url("../public/fonts/Philosopher-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lixend";
+  src: url("../public/fonts/Lexend-Regular.ttf");
+}
+
 
 body {
-  /* font-family: 'Plus Jakarta Sans', sans-serif; */
+  font-family: 'Lixend', sans-serif;
 }
 
 /***************************************************

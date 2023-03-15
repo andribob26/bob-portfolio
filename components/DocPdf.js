@@ -9,6 +9,7 @@ import {
   StyleSheet,
   Font,
   PDFDownloadLink,
+  Link,
 } from "@react-pdf/renderer";
 
 const ListItem = ({ children }) => {
@@ -17,6 +18,7 @@ const ListItem = ({ children }) => {
       style={{
         display: "flex",
         flexDirection: "row",
+        marginBottom: "2px",
       }}
     >
       <View
@@ -26,35 +28,34 @@ const ListItem = ({ children }) => {
       >
         <Text>{"\u2022" + " "}</Text>
       </View>
-      <Text>{children}</Text>
+      {children}
     </View>
   );
 };
 
-const Line = () => {
+const Line = ({ height, color }) => {
   return (
     <View
       style={{
-        height: "1px",
+        height: height,
         width: "100%",
-        backgroundColor: "black",
-        marginBottom: "8px",
+        backgroundColor: color,
       }}
     ></View>
   );
 };
 
 Font.register({
-  family: "Georgia",
+  family: "Lexend",
 
   fonts: [
     {
-      src: "/fonts/Georgia.ttf",
+      src: "/fonts/Lexend-Regular.ttf",
       fontStyle: "normal",
       fontWeight: "normal",
     },
     {
-      src: "/fonts/georgia bold.ttf",
+      src: "/fonts/Lexend-Bold.ttf",
       fontStyle: "bold",
       fontWeight: "bold",
     },
@@ -67,28 +68,54 @@ export const Pdf = () => {
       <Page
         size="A4"
         style={{
-          fontFamily: "Georgia",
-          fontSize: "12px",
-          padding: "48px",
+          fontFamily: "Lexend",
+          fontSize: "10px",
+          color: "#283747",
         }}
       >
         <View
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
             marginBottom: "16px",
+            padding: "48px 48px 0px 48px",
           }}
         >
-          <View>
+          <Image
+            style={{
+              borderRadius: "100%",
+              height: "150px",
+              width: "150px",
+              objectFit: "cover",
+            }}
+            src={"/images/andribgbiru.jpg"}
+          />
+          <View
+            style={{
+              display: "flex",
+              flex: 2,
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "0px 20px 0px 20px",
+            }}
+          >
             <Text
               style={{
-                fontSize: "18px",
+                fontSize: "28px",
                 fontStyle: "bold",
               }}
             >
-              Andri Febrian
+              Andri{" "}
+              <Text
+                style={{
+                  color: "#E74C3C",
+                }}
+              >
+                Febrian
+              </Text>
             </Text>
+            <Line height={"1.5px"} color={"#5d6d7E"} />
             <Text
               style={{
                 fontSize: "14px",
@@ -98,182 +125,428 @@ export const Pdf = () => {
               Junior Programmer
             </Text>
           </View>
-          <View
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-end",
-            }}
-          >
-            <Text>Blok Wagir, Gantar, Indramayu 45264</Text>
-            <Text
-              style={{
-                fontStyle: "bold",
-              }}
-            >
-              0881-0232-84544
-            </Text>
-            <Text>andri.feb.26@gmail.com</Text>
-            <Text>github.com/andribob26</Text>
-          </View>
         </View>
-        {/* pengalaman */}
+
+        <Line height={6} color={"#EBEDEF"} />
+        {/* content-resume */}
         <View
           style={{
-            marginBottom: "8px",
+            gap: "10px",
+            display: "flex",
+            flexDirection: "row",
+            marginTop: "16px",
+            padding: "0px 48px 48px 48px",
           }}
         >
-          <Text style={{ fontStyle: "bold", fontSize: "16px" }}>
-            Pengalaman
-          </Text>
-          <Line />
-          <View>
-            <View>
-              <Text>
-                <Text style={{ fontStyle: "bold" }}>
-                  PT. Digi Tekno Indonesia
-                </Text>{" "}
-                - Freelance Frontend Develover
-              </Text>
-              <Text style={{ fontSize: "10px", marginBottom: "8px" }}>
-                agustus - september 2022
-              </Text>
-            </View>
+          <View
+            style={{
+              flex: 1,
+              borderRight: "1.5px solid #5d6d7E",
+            }}
+          >
             <View
               style={{
-                marginLeft: "16px",
+                marginBottom: "8px",
               }}
             >
-              <ListItem>Perancangan Antarmuka</ListItem>
-              <ListItem>Slicing Antarmuka website</ListItem>
-              <ListItem>Integrasi REST API</ListItem>
-              <ListItem>Menggunakan React.js, Redux, TailwindCSS</ListItem>
+              <Text
+                style={{
+                  fontStyle: "bold",
+                  fontSize: "16px",
+                  marginBottom: "6px",
+                  color: "#E74C3C",
+                }}
+              >
+                Kontak
+              </Text>
+              <View>
+                <ListItem>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <Text>Blok Wagir, Gantar,</Text>
+                    <Text>Indramayu 45264</Text>
+                  </View>
+                </ListItem>
+                <ListItem>
+                  <Link
+                    src="https://wa.me/0881023284544"
+                    style={{
+                      color: "#283747",
+                    }}
+                  >
+                    0881-0232-84544
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link
+                    src="mailto:andri.feb.26@gmail.com"
+                    style={{
+                      color: "#283747",
+                    }}
+                  >
+                    andri.feb.26@gmail.com
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link
+                    src="https://github.com/andribob26"
+                    style={{
+                      color: "#283747",
+                    }}
+                  >
+                    github.com/andribob26
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link
+                    src="https://bob-portfolio.vercel.app/"
+                    style={{
+                      color: "#283747",
+                    }}
+                  >
+                    bob-portfolio.vercel.app
+                  </Link>
+                </ListItem>
+              </View>
             </View>
-          </View>
-        </View>
-        {/* project pribadi */}
-        <View>
-          <Text style={{ fontStyle: "bold", fontSize: "16px" }}>
-            Projek Pribadi
-          </Text>
-          <Line />
 
-          <View
-            style={{
-              marginBottom: "8px",
-            }}
-          >
-            <View>
-              <Text style={{ fontStyle: "bold" }}>GPS Pengukur Area</Text>
-            </View>
             <View
               style={{
-                marginLeft: "16px",
+                marginBottom: "8px",
               }}
             >
-              <ListItem>
-                Aplikasi berbasis mobile yang digunakan untuk membantu mengukur
-                luas area yang memanfaatkan gps dalam pengukurannya
-              </ListItem>
-              <ListItem>Menggunakan Dart(Flutter), GetX, Leaflet</ListItem>
-            </View>
-          </View>
-
-          <View
-            style={{
-              marginBottom: "8px",
-            }}
-          >
-            <View>
-              <Text style={{ fontStyle: "bold" }}>Pangkas Gambar Simpel</Text>
-            </View>
-            <View
-              style={{
-                marginLeft: "16px",
-              }}
-            >
-              <ListItem>
-                Aplikasi berbasis mobile crop/pangkas gambar yang mudah di
-                gunakan
-              </ListItem>
-              <ListItem>Menggunakan Dart(Flutter), GetX</ListItem>
-            </View>
-          </View>
-
-          <View
-            style={{
-              marginBottom: "8px",
-            }}
-          >
-            <View>
-              <Text style={{ fontStyle: "bold" }}>Indo TV</Text>
-            </View>
-            <View
-              style={{
-                marginLeft: "16px",
-              }}
-            >
-              <ListItem>
-                Aplikasi berbasis mobile untuk menonton siaran langsung televisi
-                lokal
-              </ListItem>
-              <ListItem>Menggunakan Dart(Flutter), GetX, Firebase</ListItem>
-            </View>
-          </View>
-        </View>
-        {/* pendidikan */}
-        <View
-          style={{
-            marginBottom: "8px",
-          }}
-        >
-          <Text style={{ fontStyle: "bold", fontSize: "16px" }}>
-            Pendidikan
-          </Text>
-          <Line />
-          <View>
-            <View>
-              <Text>
-                <Text style={{ fontStyle: "bold" }}>
-                  Universitas Komputer Indonesia
-                </Text>{" "}
-                - S1 Teknik Informatika
+              <Text
+                style={{
+                  fontStyle: "bold",
+                  fontSize: "16px",
+                  marginBottom: "6px",
+                  color: "#E74C3C",
+                }}
+              >
+                Keahlian
               </Text>
-              <Text style={{ fontSize: "10px", marginBottom: "8px" }}>
-                2018 - 2023
-              </Text>
+              <View>
+                <ListItem>
+                  <Text>Html</Text>
+                </ListItem>
+                <ListItem>
+                  <Text>Css</Text>
+                </ListItem>
+                <ListItem>
+                  <Text>JavaScript</Text>
+                </ListItem>
+                <ListItem>
+                  <Text>TypeScript</Text>
+                </ListItem>
+                <ListItem>
+                  <Text>Dart</Text>
+                </ListItem>
+                <ListItem>
+                  <Text>Node.js</Text>
+                </ListItem>
+                <ListItem>
+                  <Text>React.js</Text>
+                </ListItem>
+                <ListItem>
+                  <Text>Next.js</Text>
+                </ListItem>
+                <ListItem>
+                  <Text>TailwindCss</Text>
+                </ListItem>
+                <ListItem>
+                  <Text>Flutter</Text>
+                </ListItem>
+                <ListItem>
+                  <Text>Express.js</Text>
+                </ListItem>
+              </View>
             </View>
           </View>
-        </View>
-        {/* Keahlian */}
-        <View
-          style={{
-            marginBottom: "8px",
-          }}
-        >
-          <Text style={{ fontStyle: "bold", fontSize: "16px" }}>
-            Keahlian
-          </Text>
-          <Line />
           <View
             style={{
-              marginLeft: "16px",
+              flex: 2,
             }}
           >
-            <ListItem>Html</ListItem>
-            <ListItem>Css</ListItem>
-            <ListItem>JavaScript</ListItem>
-            <ListItem>TypeScript</ListItem>
-            <ListItem>Dart</ListItem>
-            <ListItem>TailwindCss</ListItem>
-            <ListItem>Node.js</ListItem>
-            <ListItem>React.js</ListItem>
-            <ListItem>Next.js</ListItem>
-            <ListItem>Redux</ListItem>
-            <ListItem>Flutter</ListItem>
-            <ListItem>GetX</ListItem>
-            <ListItem>Express.js</ListItem>
-            <ListItem>ORM Sequelize</ListItem>
+            {/* pengalaman */}
+            <View
+              style={{
+                marginBottom: "8px",
+              }}
+            >
+              <Text
+                style={{
+                  fontStyle: "bold",
+                  fontSize: "16px",
+                  marginBottom: "6px",
+                  color: "#E74C3C",
+                }}
+              >
+                Pengalaman
+              </Text>
+              <View>
+                <View>
+                  <Text>
+                    <Text style={{ fontStyle: "bold" }}>
+                      PT. Digi Tekno Indonesia
+                    </Text>{" "}
+                    - Freelance Frontend Develover
+                  </Text>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      color: "#5d6d7E",
+                      fontSize: "8px",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    <Text>agustus - september 2022</Text>
+                    <Text>Jl. Magna Barat Blok MD. 18, Bandung</Text>
+                  </View>
+                </View>
+                <View>
+                  <ListItem>
+                    <Text>
+                      Slicing Antarmuka website menggunakan TailwindCss
+                    </Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Mengintegrasikan REST API dari backend</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan Redux untuk state managementnya</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan JavaScript(React.js)</Text>
+                  </ListItem>
+                </View>
+              </View>
+            </View>
+            {/* project pribadi */}
+            <View>
+              <Text
+                style={{
+                  fontStyle: "bold",
+                  fontSize: "16px",
+                  marginBottom: "6px",
+                  color: "#E74C3C",
+                }}
+              >
+                Projek Pribadi
+              </Text>
+              <View
+                style={{
+                  marginBottom: "8px",
+                }}
+              >
+                <View>
+                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>
+                    GPS Pengukur Area
+                  </Text>
+                </View>
+                <View>
+                  <ListItem>
+                    <Text>Menggunakan GetX untuk state managementnya</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>
+                      Memanfaatkan GPS pada Smartphone untuk mempermudah
+                      menentukan titik kordinat
+                    </Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan leaflet.js dalam pemetaan areanya</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan Dart(Flutter)</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Link
+                      src="https://github.com/andribob26/gps-pengukur-area"
+                      style={{
+                        color: "#283747",
+                      }}
+                    >
+                      github.com/andribob26/gps-pengukur-area
+                    </Link>
+                  </ListItem>
+                </View>
+              </View>
+
+              <View
+                style={{
+                  marginBottom: "8px",
+                }}
+              >
+                <View>
+                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>
+                    Pangkas Gambar Simpel
+                  </Text>
+                </View>
+                <View>
+                  <ListItem>
+                    <Text>Menggunakan GetX untuk state managementnya</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan Dart(Flutter)</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Link
+                      src="https://github.com/andribob26/pangkas-gambar-simpel"
+                      style={{
+                        color: "#283747",
+                      }}
+                    >
+                      github.com/andribob26/pangkas-gambar-simpel
+                    </Link>
+                  </ListItem>
+                </View>
+              </View>
+
+              <View
+                style={{
+                  marginBottom: "8px",
+                }}
+              >
+                <View>
+                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>
+                    Indo TV
+                  </Text>
+                </View>
+                <View>
+                  <ListItem>
+                    <Text>Mengunakan Firebase untuk menyimpan alamat IPTV</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan GetX untuk state managementnya</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan Dart(Flutter)</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Link
+                      src="https://github.com/andribob26/indo-tv"
+                      style={{
+                        color: "#283747",
+                      }}
+                    >
+                      github.com/andribob26/indo-tv
+                    </Link>
+                  </ListItem>
+                </View>
+              </View>
+
+              {/* <View
+                style={{
+                  marginBottom: "8px",
+                }}
+              >
+                <View>
+                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>
+                    Aplikasi Pengelolaan Produksi Beras PD. ADM
+                  </Text>
+                </View>
+                <View>
+                  <ListItem>
+                    <Text>
+                      Menggunakan ORM Sequelize pada backend untuk mempermudah
+                      dalam Query dan Relasi ke Database PostgreSQL
+                    </Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>
+                      Menggunakan Node.js(Express.js) untuk pembuatan REST API
+                    </Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan TailwindCSS untuk stylingnya</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan Redux untuk mengelola statenya</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan JavaScript(React.js)</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Link
+                      src="https://github.com/andribob26/adm-app"
+                      style={{
+                        color: "#E74C3C",
+                      }}
+                    >
+                     github.com/andribob26/adm-app
+                    </Link>
+                  </ListItem>
+                </View>
+              </View> */}
+            </View>
+
+            {/* pendidikan */}
+            <View>
+              <Text
+                style={{
+                  fontStyle: "bold",
+                  fontSize: "16px",
+                  marginBottom: "6px",
+                  color: "#E74C3C",
+                }}
+              >
+                Pendidikan
+              </Text>
+              <View>
+                <View>
+                  <Text>
+                    <Text style={{ fontStyle: "bold" }}>
+                      Universitas Komputer Indonesia
+                    </Text>{" "}
+                    - S1 Teknik Informatika
+                  </Text>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      color: "#5d6d7E",
+                      fontSize: "8px",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    <Text>2018 - 2023</Text>
+                    <Text>Jl. Dipati Ukur No.112-116, Bandung</Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+            {/* Keahlian */}
+            {/* <View
+              style={{
+                marginBottom: "8px",
+              }}
+            >
+              <Text
+                style={{
+                  fontStyle: "bold",
+                  fontSize: "16px",
+                  marginBottom: "6px",
+                }}
+              >
+                Keahlian
+              </Text>
+              <View
+                style={{
+                  marginLeft: "16px",
+                }}
+              >
+                <ListItem>Html</ListItem>
+                <ListItem>Css</ListItem>
+                <ListItem>JavaScript</ListItem>
+              </View>
+            </View> */}
           </View>
         </View>
       </Page>
