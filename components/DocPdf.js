@@ -252,6 +252,9 @@ export const Pdf = () => {
                   <Text>React.js</Text>
                 </ListItem>
                 <ListItem>
+                  <Text>React Native</Text>
+                </ListItem>
+                <ListItem>
                   <Text>Next.js</Text>
                 </ListItem>
                 <ListItem>
