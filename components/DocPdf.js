@@ -519,7 +519,7 @@ export const Pdf = () => {
                       marginBottom: "8px",
                     }}
                   >
-                    <Text>2018 - 2023</Text>
+                    <Text>2021 - 2023</Text>
                     <Text>Jl. Dipati Ukur No.112-116, Bandung</Text>
                   </View>
                 </View>
