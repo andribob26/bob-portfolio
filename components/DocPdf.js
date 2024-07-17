@@ -1,16 +1,5 @@
 import React from "react";
-import {
-  Document,
-  Page,
-  View,
-  Text,
-  Image,
-  PDFViewer,
-  StyleSheet,
-  Font,
-  PDFDownloadLink,
-  Link,
-} from "@react-pdf/renderer";
+import { Document, Page, View, Text, Image, PDFViewer, StyleSheet, Font, PDFDownloadLink, Link } from "@react-pdf/renderer";
 
 const ListItem = ({ children }) => {
   return (
@@ -122,7 +111,7 @@ export const Pdf = () => {
                 fontStyle: "bold",
               }}
             >
-              Junior Programmer
+              Programmer
             </Text>
           </View>
         </View>
@@ -290,13 +279,14 @@ export const Pdf = () => {
               >
                 Pengalaman
               </Text>
-              <View>
+              <View
+                style={{
+                  marginBottom: "8px",
+                }}
+              >
                 <View>
                   <Text>
-                    <Text style={{ fontStyle: "bold" }}>
-                      PT. Digi Tekno Indonesia
-                    </Text>{" "}
-                    - Freelance Frontend Develover
+                    <Text style={{ fontStyle: "bold" }}>PT. Digi Tekno Indonesia</Text> - Freelance Frontend Develover
                   </Text>
                   <View
                     style={{
@@ -314,8 +304,92 @@ export const Pdf = () => {
                 </View>
                 <View>
                   <ListItem>
+                    <Text>Slicing Antarmuka website menggunakan TailwindCss</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Mengintegrasikan REST API dari backend</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan Redux untuk state managementnya</Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>Menggunakan JavaScript(React.js)</Text>
+                  </ListItem>
+                </View>
+              </View>
+
+              <View
+                style={{
+                  marginBottom: "8px",
+                }}
+              >
+                <View>
+                  <Text>
+                    <Text style={{ fontStyle: "bold" }}>PT. Atap Teknologi</Text> - Frontend Develover
+                  </Text>
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      color: "#5d6d7E",
+                      fontSize: "8px",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    <Text>Juli 2023 - Sekarang</Text>
+                    <Text>Jl. Cihanjuang, Bandung Barat</Text>
+                  </View>
+                </View>
+                <View>
+                  <ListItem>
                     <Text>
-                      Slicing Antarmuka website menggunakan TailwindCss
+                      Berkontribusi mengembangkan aplikasi website ERP(Frontend)
+                      {"\n"}
+                      <Link
+                        src="https://erp.atapteknologi.id"
+                        style={{
+                          color: "#E74C3C",
+                        }}
+                      >
+                        erp.atapteknologi.id
+                      </Link>{" "}
+                      dan{" "}
+                      <Link
+                        src="https://erp.pesonakahuripan.co.id"
+                        style={{
+                          color: "#E74C3C",
+                        }}
+                      >
+                        erp.pesonakahuripan.co.id
+                      </Link>
+                    </Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>
+                      Berkontribusi mengembangkan aplikasi mobile Siemon ASDP(Frontend)
+                      {"\n"}
+                      <Link
+                        src="https://play.google.com/store/apps/details?id=com.asdp.siemon"
+                        style={{
+                          color: "#E74C3C",
+                        }}
+                      >
+                        play.google.com/store/apps/details?id=com.asdp.siemon
+                      </Link>
+                    </Text>
+                  </ListItem>
+                  <ListItem>
+                    <Text>
+                      Berkontribusi mengembangkan website Pesona Kahuripan(Frontend){"\n"}
+                      <Link
+                        src="https://pesonakahuripan.co.id"
+                        style={{
+                          color: "#E74C3C",
+                        }}
+                      >
+                        pesonakahuripan.co.id
+                      </Link>
                     </Text>
                   </ListItem>
                   <ListItem>
@@ -342,25 +416,20 @@ export const Pdf = () => {
               >
                 Projek Pribadi
               </Text>
-              <View
+              {/* <View
                 style={{
                   marginBottom: "8px",
                 }}
               >
                 <View>
-                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>
-                    GPS Pengukur Area
-                  </Text>
+                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>GPS Pengukur Area</Text>
                 </View>
                 <View>
                   <ListItem>
                     <Text>Menggunakan GetX untuk state managementnya</Text>
                   </ListItem>
                   <ListItem>
-                    <Text>
-                      Memanfaatkan GPS pada Smartphone untuk mempermudah
-                      menentukan titik kordinat
-                    </Text>
+                    <Text>Memanfaatkan GPS pada Smartphone untuk mempermudah menentukan titik kordinat</Text>
                   </ListItem>
                   <ListItem>
                     <Text>Menggunakan leaflet.js dalam pemetaan areanya</Text>
@@ -379,17 +448,15 @@ export const Pdf = () => {
                     </Link>
                   </ListItem>
                 </View>
-              </View>
+              </View> */}
 
-              <View
+              {/* <View
                 style={{
                   marginBottom: "8px",
                 }}
               >
                 <View>
-                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>
-                    Pangkas Gambar Simpel
-                  </Text>
+                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>Pangkas Gambar Simpel</Text>
                 </View>
                 <View>
                   <ListItem>
@@ -409,17 +476,15 @@ export const Pdf = () => {
                     </Link>
                   </ListItem>
                 </View>
-              </View>
+              </View> */}
 
-              <View
+              {/* <View
                 style={{
                   marginBottom: "8px",
                 }}
               >
                 <View>
-                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>
-                    Indo TV
-                  </Text>
+                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>Indo TV</Text>
                 </View>
                 <View>
                   <ListItem>
@@ -442,29 +507,22 @@ export const Pdf = () => {
                     </Link>
                   </ListItem>
                 </View>
-              </View>
+              </View> */}
 
-              {/* <View
+              <View
                 style={{
                   marginBottom: "8px",
                 }}
               >
                 <View>
-                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>
-                    Aplikasi Pengelolaan Produksi Beras PD. ADM
-                  </Text>
+                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>Aplikasi Pengelolaan Produksi Beras PD. ADM</Text>
                 </View>
                 <View>
                   <ListItem>
-                    <Text>
-                      Menggunakan ORM Sequelize pada backend untuk mempermudah
-                      dalam Query dan Relasi ke Database PostgreSQL
-                    </Text>
+                    <Text>Menggunakan ORM Sequelize pada backend untuk mempermudah dalam Query dan Relasi ke Database PostgreSQL</Text>
                   </ListItem>
                   <ListItem>
-                    <Text>
-                      Menggunakan Node.js(Express.js) untuk pembuatan REST API
-                    </Text>
+                    <Text>Menggunakan Node.js(Express.js) untuk pembuatan REST API</Text>
                   </ListItem>
                   <ListItem>
                     <Text>Menggunakan TailwindCSS untuk stylingnya</Text>
@@ -482,11 +540,11 @@ export const Pdf = () => {
                         color: "#E74C3C",
                       }}
                     >
-                     github.com/andribob26/adm-app
+                      github.com/andribob26/adm-app
                     </Link>
                   </ListItem>
                 </View>
-              </View> */}
+              </View>
             </View>
 
             {/* pendidikan */}
@@ -504,10 +562,7 @@ export const Pdf = () => {
               <View>
                 <View>
                   <Text>
-                    <Text style={{ fontStyle: "bold" }}>
-                      Universitas Komputer Indonesia
-                    </Text>{" "}
-                    - S1 Teknik Informatika
+                    <Text style={{ fontStyle: "bold" }}>Universitas Komputer Indonesia</Text> - S1 Teknik Informatika
                   </Text>
                   <View
                     style={{
