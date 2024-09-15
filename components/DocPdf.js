@@ -1,5 +1,16 @@
 import React from "react";
-import { Document, Page, View, Text, Image, PDFViewer, StyleSheet, Font, PDFDownloadLink, Link } from "@react-pdf/renderer";
+import {
+  Document,
+  Page,
+  View,
+  Text,
+  Image,
+  PDFViewer,
+  StyleSheet,
+  Font,
+  PDFDownloadLink,
+  Link,
+} from "@react-pdf/renderer";
 
 const ListItem = ({ children }) => {
   return (
@@ -73,8 +84,8 @@ export const Pdf = () => {
           <Image
             style={{
               borderRadius: "100%",
-              height: "150px",
-              width: "150px",
+              height: "80px",
+              width: "80px",
               objectFit: "cover",
             }}
             src={"/images/andribgbiru.jpg"}
@@ -111,7 +122,7 @@ export const Pdf = () => {
                 fontStyle: "bold",
               }}
             >
-              Programmer
+              Software Developer
             </Text>
           </View>
         </View>
@@ -124,17 +135,18 @@ export const Pdf = () => {
             display: "flex",
             flexDirection: "row",
             marginTop: "16px",
-            padding: "0px 48px 48px 48px",
+            padding: "0px 48px 0px 48px",
           }}
         >
           <View
             style={{
-              flex: 1,
+              // flex: 1,
               borderRight: "1.5px solid #5d6d7E",
             }}
           >
             <View
               style={{
+                marginRight: "10px",
                 marginBottom: "8px",
               }}
             >
@@ -241,9 +253,6 @@ export const Pdf = () => {
                   <Text>React.js</Text>
                 </ListItem>
                 <ListItem>
-                  <Text>React Native</Text>
-                </ListItem>
-                <ListItem>
                   <Text>Next.js</Text>
                 </ListItem>
                 <ListItem>
@@ -258,17 +267,46 @@ export const Pdf = () => {
               </View>
             </View>
           </View>
+
           <View
             style={{
               flex: 2,
             }}
           >
-            {/* pengalaman */}
             <View
               style={{
                 marginBottom: "8px",
               }}
             >
+              <Text
+                style={{
+                  marginBottom: "2px",
+                }}
+              >
+                Saya memulai pemrograman pada tahun 2017 dengan bahasa Pascal
+                dan terus mendalami bidang ini seiring waktu. Pada tahun 2019,
+                setelah mempelajari React.js, saya mengembangkan minat dalam
+                pengembangan aplikasi.
+              </Text>
+              <Text
+                style={{
+                  marginBottom: "2px",
+                }}
+              >
+                Di perusahaan sebelumnya, saya berpengalaman dalam mengembangkan
+                aplikasi web dan mobile dengan menggunakan React.js, Flutter,
+                Socket.io, Redux, dan Firebase untuk menciptakan solusi yang
+                efektif dan skalabel.
+              </Text>
+              <Text>
+                Sebagai lulusan S1 Teknik Informatika dari Universitas Komputer
+                Indonesia, saya memiliki dasar yang kuat dalam pemrograman dan
+                pengembangan perangkat lunak. Saat ini, saya terus belajar dan
+                mencari peluang baru untuk berkembang dalam industri teknologi.
+              </Text>
+            </View>
+            {/* pengalaman */}
+            <View>
               <Text
                 style={{
                   fontStyle: "bold",
@@ -286,34 +324,46 @@ export const Pdf = () => {
               >
                 <View>
                   <Text>
-                    <Text style={{ fontStyle: "bold" }}>PT. Digi Tekno Indonesia</Text> - Freelance Frontend Develover
+                    <Text style={{ fontStyle: "bold" }}>
+                      PT. Digi Tekno Indonesia
+                    </Text>{" "}
+                    - Freelance Frontend Develover
                   </Text>
                   <View
                     style={{
                       display: "flex",
-                      flexDirection: "row",
+                      flexDirection: "column",
                       justifyContent: "space-between",
                       color: "#5d6d7E",
                       fontSize: "8px",
                       marginBottom: "8px",
                     }}
                   >
+                    <Text>Jl. Magna Barat, Blok MD. 18, Bandung</Text>
                     <Text>agustus - september 2022</Text>
-                    <Text>Jl. Magna Barat Blok MD. 18, Bandung</Text>
                   </View>
                 </View>
                 <View>
                   <ListItem>
-                    <Text>Slicing Antarmuka website menggunakan TailwindCss</Text>
+                    <Text>
+                      Menerapkan desain responsif untuk memastikan aplikasi
+                      website berfungsi dengan baik di berbagai perangkat dan
+                      ukuran layar.
+                    </Text>
                   </ListItem>
                   <ListItem>
-                    <Text>Mengintegrasikan REST API dari backend</Text>
+                    <Text>
+                      Mengintegrasikan layanan backend untuk memfasilitasi
+                      operasi CRUD (Create, Read, Update, Delete) dan
+                      sinkronisasi data dengan server menggunakan RESTful APIs
+                    </Text>
                   </ListItem>
                   <ListItem>
-                    <Text>Menggunakan Redux untuk state managementnya</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Menggunakan JavaScript(React.js)</Text>
+                    <Text>
+                      Menggunakan framework dan pustaka JavaScript seperti
+                      React.js untuk membangun aplikasi website yang dinamis dan
+                      interaktif.
+                    </Text>
                   </ListItem>
                 </View>
               </View>
@@ -325,223 +375,63 @@ export const Pdf = () => {
               >
                 <View>
                   <Text>
-                    <Text style={{ fontStyle: "bold" }}>PT. Atap Teknologi</Text> - Frontend Develover
+                    <Text style={{ fontStyle: "bold" }}>
+                      PT. Atap Teknologi
+                    </Text>{" "}
+                    - Frontend Develover
                   </Text>
                   <View
                     style={{
                       display: "flex",
-                      flexDirection: "row",
+                      flexDirection: "column",
                       justifyContent: "space-between",
                       color: "#5d6d7E",
                       fontSize: "8px",
                       marginBottom: "8px",
                     }}
                   >
-                    <Text>Juli 2023 - Sekarang</Text>
-                    <Text>Jl. Cihanjuang, Bandung Barat</Text>
+                    <Text>
+                      Jl. Cihanjuang, Blok Aki Nurhasan No.88-A, Bandung Barat
+                    </Text>
+                    <Text>Juli 2023 - agustus 2024</Text>
                   </View>
                 </View>
                 <View>
                   <ListItem>
                     <Text>
-                      Berkontribusi mengembangkan aplikasi website ERP(Frontend)
-                      {"\n"}
-                      <Link
-                        src="https://erp.atapteknologi.id"
-                        style={{
-                          color: "#E74C3C",
-                        }}
-                      >
-                        erp.atapteknologi.id
-                      </Link>{" "}
-                      dan{" "}
-                      <Link
-                        src="https://erp.pesonakahuripan.co.id"
-                        style={{
-                          color: "#E74C3C",
-                        }}
-                      >
-                        erp.pesonakahuripan.co.id
-                      </Link>
+                      Menerapkan desain responsif untuk memastikan aplikasi
+                      website dan aplikasi mobile berfungsi dengan baik di
+                      berbagai perangkat dan ukuran layar.
                     </Text>
                   </ListItem>
                   <ListItem>
                     <Text>
-                      Berkontribusi mengembangkan aplikasi mobile Siemon ASDP(Frontend)
-                      {"\n"}
-                      <Link
-                        src="https://play.google.com/store/apps/details?id=com.asdp.siemon"
-                        style={{
-                          color: "#E74C3C",
-                        }}
-                      >
-                        play.google.com/store/apps/details?id=com.asdp.siemon
-                      </Link>
+                      Mengintegrasikan layanan backend untuk memfasilitasi
+                      operasi CRUD (Create, Read, Update, Delete) dan
+                      sinkronisasi data dengan server menggunakan RESTful APIs
                     </Text>
                   </ListItem>
                   <ListItem>
                     <Text>
-                      Berkontribusi mengembangkan website Pesona Kahuripan(Frontend){"\n"}
-                      <Link
-                        src="https://pesonakahuripan.co.id"
-                        style={{
-                          color: "#E74C3C",
-                        }}
-                      >
-                        pesonakahuripan.co.id
-                      </Link>
+                      Menggunakan Socket.io untuk mengimplementasikan komunikasi
+                      real-time dalam aplikasi web dan mobile, seperti chat dan
+                      notifikasi langsung
                     </Text>
                   </ListItem>
                   <ListItem>
-                    <Text>Mengintegrasikan REST API dari backend</Text>
+                    <Text>
+                      Mengintegrasikan layanan Google, termasuk Google Maps API
+                      untuk peta interaktif, Firebase Cloud Messaging (FCM)
+                      untuk notifikasi push, dan Firebase Authentication untuk
+                      berbagai metode otentikasi.
+                    </Text>
                   </ListItem>
                   <ListItem>
-                    <Text>Menggunakan Redux untuk state managementnya</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Menggunakan JavaScript(React.js)</Text>
-                  </ListItem>
-                </View>
-              </View>
-            </View>
-            {/* project pribadi */}
-            <View>
-              <Text
-                style={{
-                  fontStyle: "bold",
-                  fontSize: "16px",
-                  marginBottom: "6px",
-                  color: "#E74C3C",
-                }}
-              >
-                Projek Pribadi
-              </Text>
-              {/* <View
-                style={{
-                  marginBottom: "8px",
-                }}
-              >
-                <View>
-                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>GPS Pengukur Area</Text>
-                </View>
-                <View>
-                  <ListItem>
-                    <Text>Menggunakan GetX untuk state managementnya</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Memanfaatkan GPS pada Smartphone untuk mempermudah menentukan titik kordinat</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Menggunakan leaflet.js dalam pemetaan areanya</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Menggunakan Dart(Flutter)</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Link
-                      src="https://github.com/andribob26/gps-pengukur-area"
-                      style={{
-                        color: "#283747",
-                      }}
-                    >
-                      github.com/andribob26/gps-pengukur-area
-                    </Link>
-                  </ListItem>
-                </View>
-              </View> */}
-
-              {/* <View
-                style={{
-                  marginBottom: "8px",
-                }}
-              >
-                <View>
-                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>Pangkas Gambar Simpel</Text>
-                </View>
-                <View>
-                  <ListItem>
-                    <Text>Menggunakan GetX untuk state managementnya</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Menggunakan Dart(Flutter)</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Link
-                      src="https://github.com/andribob26/pangkas-gambar-simpel"
-                      style={{
-                        color: "#283747",
-                      }}
-                    >
-                      github.com/andribob26/pangkas-gambar-simpel
-                    </Link>
-                  </ListItem>
-                </View>
-              </View> */}
-
-              {/* <View
-                style={{
-                  marginBottom: "8px",
-                }}
-              >
-                <View>
-                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>Indo TV</Text>
-                </View>
-                <View>
-                  <ListItem>
-                    <Text>Mengunakan Firebase untuk menyimpan alamat IPTV</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Menggunakan GetX untuk state managementnya</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Menggunakan Dart(Flutter)</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Link
-                      src="https://github.com/andribob26/indo-tv"
-                      style={{
-                        color: "#283747",
-                      }}
-                    >
-                      github.com/andribob26/indo-tv
-                    </Link>
-                  </ListItem>
-                </View>
-              </View> */}
-
-              <View
-                style={{
-                  marginBottom: "8px",
-                }}
-              >
-                <View>
-                  <Text style={{ fontStyle: "bold", marginBottom: "8px" }}>Aplikasi Pengelolaan Produksi Beras PD. ADM</Text>
-                </View>
-                <View>
-                  <ListItem>
-                    <Text>Menggunakan ORM Sequelize pada backend untuk mempermudah dalam Query dan Relasi ke Database PostgreSQL</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Menggunakan Node.js(Express.js) untuk pembuatan REST API</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Menggunakan TailwindCSS untuk stylingnya</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Menggunakan Redux untuk mengelola statenya</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text>Menggunakan JavaScript(React.js)</Text>
-                  </ListItem>
-                  <ListItem>
-                    <Link
-                      src="https://github.com/andribob26/adm-app"
-                      style={{
-                        color: "#E74C3C",
-                      }}
-                    >
-                      github.com/andribob26/adm-app
-                    </Link>
+                    <Text>
+                      Menggunakan framework dan pustaka JavaScript seperti
+                      React.js serta Flutter untuk membangun aplikasi web dan
+                      mobile yang dinamis dan interaktif.
+                    </Text>
                   </ListItem>
                 </View>
               </View>
@@ -553,8 +443,8 @@ export const Pdf = () => {
                 style={{
                   fontStyle: "bold",
                   fontSize: "16px",
-                  marginBottom: "6px",
                   color: "#E74C3C",
+                  marginBottom: "8px",
                 }}
               >
                 Pendidikan
@@ -562,7 +452,10 @@ export const Pdf = () => {
               <View>
                 <View>
                   <Text>
-                    <Text style={{ fontStyle: "bold" }}>Universitas Komputer Indonesia</Text> - S1 Teknik Informatika
+                    <Text style={{ fontStyle: "bold" }}>
+                      Universitas Komputer Indonesia
+                    </Text>{" "}
+                    - S1 Teknik Informatika
                   </Text>
                   <View
                     style={{
