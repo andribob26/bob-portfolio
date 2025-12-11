@@ -11,6 +11,7 @@ import {
   SiReact,
   SiFirebase,
   SiLeaflet,
+  SiGooglemaps,
 } from "react-icons/si";
 import parse from "html-react-parser";
 import { renderToString } from "react-dom/server";
@@ -106,13 +107,15 @@ const ProjectsPage = (props) => {
                           );
                         })}
                       </ul>
-                      <Link
-                        href={project.github}
-                        target={"_blank"}
-                        rel={"noopener noreferrer"}
-                      >
-                        <SiGithub className="text-2xl hover:text-my-primary transition-all duration-300 ease-out" />
-                      </Link>
+                      {project.github && (
+                        <Link
+                          href={project.github}
+                          target={"_blank"}
+                          rel={"noopener noreferrer"}
+                        >
+                          <SiGithub className="text-2xl hover:text-my-primary transition-all duration-300 ease-out" />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -129,9 +132,53 @@ export const getStaticProps = async (ctx) => {
   const projects = [
     {
       left: true,
+      title: "IoT Platform - PT. Atap Teknologi Indonesia",
+      deskripsi:
+        "Aplikasi berbasis Web yang digunakan untuk memantau dan mengelola berbagai aset operasional secara real-time, baik yang bergerak maupun statis. Data dikirim oleh perangkat IoT di lapangan dan ditampilkan melalui aplikasi secara akurat dan mudah dipahami. Selain monitoring, sistem ini menyediakan fitur manajemen aset seperti pengaturan perangkat, riwayat operasional, dan pengelolaan parameter sehingga seluruh siklus aset dapat dikelola dalam satu platform terpadu.",
+      image: "/images/dashboard-aptek.png",
+      teknologi: [
+        {
+          nama: "React.js",
+          icon: renderToString(<SiReact className="" />),
+        },
+        {
+          nama: "TailwindCss",
+          icon: renderToString(<SiTailwindcss className="" />),
+        },
+        {
+          nama: "Google map",
+          icon: renderToString(<SiGooglemaps className="" />),
+        },
+        {
+          nama: "Leaflet",
+          icon: renderToString(<SiLeaflet className="" />),
+        },
+      ],
+      github: null,
+    },
+    {
+      left: false,
+      title: "Tank Monitoring System - PT. Atap Teknologi Indonesia & Telkomsel INTANK",
+      deskripsi:
+        "Aplikasi berbasis Web yang digunakan untuk memantau kondisi tangki secara real-time di lingkungan industri PTPN. Sistem ini menerima data dari perangkat IoT yang terpasang pada tangki untuk menampilkan informasi penting seperti level cairan, suhu (temperature), tonase, serta parameter operasional lainnya.",
+      image: "/images/tank-monitoring-sistem.png",
+      teknologi: [
+        {
+          nama: "React.js",
+          icon: renderToString(<SiReact className="" />),
+        },
+        {
+          nama: "TailwindCss",
+          icon: renderToString(<SiTailwindcss className="" />),
+        },
+      ],
+      github: null,
+    },
+    {
+      left: true,
       title: "GPS Pengukur Area",
       deskripsi:
-        "Aplikasi berbasis mobile yang digunakan untuk membantu mengukur luas area yang memanfaatkan gps dalam pengukurannya",
+        "Aplikasi berbasis mobile yang digunakan untuk membantu mengukur luas area yang memanfaatkan gps dalam pengukurannya.",
       image: "/images/gps-pengukur-area.jpg",
       teknologi: [
         {
@@ -153,7 +200,7 @@ export const getStaticProps = async (ctx) => {
       left: false,
       title: "Pangkas Gambar Simpel",
       deskripsi:
-        "Aplikasi berbasis mobile crop/pangkas gambar yang mudah di gunakan",
+        "Aplikasi berbasis mobile crop/pangkas gambar yang mudah di gunakan.",
       image: "/images/pangkas-gambar.jpg",
       teknologi: [
         {
@@ -171,7 +218,7 @@ export const getStaticProps = async (ctx) => {
       left: true,
       title: "Indo TV",
       deskripsi:
-        "Aplikasi berbasis mobile untuk menonton siaran langsung televisi lokal",
+        "Aplikasi berbasis mobile untuk menonton siaran langsung televisi lokal.",
       image: "/images/indo-tv.jpg",
       teknologi: [
         {
@@ -191,9 +238,9 @@ export const getStaticProps = async (ctx) => {
     },
     {
       left: false,
-      title: "Aplikasi Pengelolaan Produksi Beras PD. ADM Adam Gemilang",
+      title: "Aplikasi Pengelolaan Produksi Beras - PD. ADM Adam Gemilang",
       deskripsi:
-        "Aplikasi berbasis web untuk mengelola pencatatan pembelian dan penjualan serta persediaan beras secara terkomputerisasi di PD. ADM",
+        "Aplikasi berbasis web untuk mengelola pencatatan pembelian dan penjualan serta persediaan beras secara terkomputerisasi di PD. ADM.",
       image: "/images/adm-laporan.PNG",
       teknologi: [
         {

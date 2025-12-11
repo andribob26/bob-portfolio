@@ -72,7 +72,7 @@ const Header = ({ pathName, linkClickHandler }) => {
     <header
       className={`${
         isShadow && "drop-shadow"
-      } header-el fixed left-0 right-0 top-0 h-[10vh] lg:h-[15vh] flex justify-between lg:justify-between items-center px-5 lg:px-20 z-10 bg-white dark:bg-my-black transition-all duration-300 ease-out`}
+      } header-el fixed left-0 right-0 top-0 h-[105px] flex justify-between lg:justify-between items-center px-5 lg:px-20 z-10 bg-white dark:bg-my-black transition-all duration-300 ease-out`}
     >
       <button
         onClick={showMobileNav}
