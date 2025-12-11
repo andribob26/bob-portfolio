@@ -129,7 +129,7 @@ const ProjectsPage = (props) => {
 };
 
 export const getStaticProps = async (ctx) => {
-  
+
   const projects = [
     {
       left: true,
@@ -161,7 +161,7 @@ export const getStaticProps = async (ctx) => {
       left: false,
       title: "Tank Monitoring System - PT. Atap Teknologi Indonesia & Telkomsel INTANK",
       deskripsi:
-        "Aplikasi berbasis Web yang digunakan untuk memantau kondisi tangki secara real-time di lingkungan industri PTPN. Sistem ini menerima data dari perangkat IoT yang terpasang pada tangki untuk menampilkan informasi penting seperti level cairan, suhu (temperature), tonase, serta parameter operasional lainnya.",
+        "Aplikasi berbasis Web yang digunakan untuk memantau kondisi tangki secara real-time di lingkungan industri PTPN 4. Sistem ini menerima data dari perangkat IoT yang terpasang pada tangki untuk menampilkan informasi penting seperti level cairan, suhu (temperature), tonase, serta parameter operasional lainnya.",
       image: "/images/tank-monitoring-sistem.png",
       teknologi: [
         {
