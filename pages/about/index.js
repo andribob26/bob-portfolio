@@ -16,6 +16,7 @@ import {
   SiSequelize,
   SiRedux,
   SiGetX,
+  SiNestjs,
 } from "react-icons/si";
 import Image from "next/image";
 
@@ -109,6 +110,10 @@ export const getStaticProps = async (ctx) => {
     {
       nama: "Express.js",
       icon: renderToString(<SiExpress className="text-my-primary mr-2" />),
+    },
+    {
+      nama: "Nest.js",
+      icon: renderToString(<SiNestjs className="text-my-primary mr-2" />),
     },
     {
       nama: "ORM Sequelize",
