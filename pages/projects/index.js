@@ -129,6 +129,7 @@ const ProjectsPage = (props) => {
 };
 
 export const getStaticProps = async (ctx) => {
+  
   const projects = [
     {
       left: true,
